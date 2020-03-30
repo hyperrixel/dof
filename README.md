@@ -25,6 +25,11 @@ Basic workflow in theory looks like following consists of two parts.
 - Build your own classifier module
 - Train your classifier module
 
+### Differences between the normal and the DoF train flows
+
+| ![Noraml train flow](fig_train_normal.png) | ![DoF train flow](fig_train_dof.png)       |
+|--------------------------------------------|--------------------------------------------|
+
 ## Future plans
 
 DoF's aim is to be implemenet for all major deep learning frameworks and programming languages which allow training of a model. Also the missing modes and use cases will be implemented. It would be nice to have an online DoF service to provide datasets from identified and certified authors but this is far behind our resource at the moment.
