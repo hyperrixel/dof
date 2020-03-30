@@ -1,0 +1,12 @@
+# Library dependencies for the DoF - Deep Model Core Output Framework project
+# You have to install these libraries, before you can run the code:
+# 'pip install -r requirements.txt'
+
+# Standard library dependencies:
+# json
+# os
+# pickle
+# shutil
+# zipfile
+
+# There is no additional library dependencies
