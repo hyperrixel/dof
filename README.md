@@ -1,3 +1,5 @@
+[![Generic badge](https://img.shields.io/badge/Version-v_1.0-001850.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/State-dev_released-ffa000.svg)](https://shields.io/)\
 # DoF - Deep Model Core Output Framework
 
 ## What is this?
