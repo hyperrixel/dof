@@ -27,6 +27,12 @@ Basic workflow in theory looks like following consists of two parts.
 - Build your own classifier module
 - Train your classifier module
 
+### Dataflow
+
+The most significant difference between normal training process and training process with DoF is that the characteristics of the raw input data and data augmentation, preprocessing must be separately noticed for further use. This additional data has both common and unique level in the whole dataset.
+
+![DoF flow](dof_flow.png)
+
 ### Differences between the normal and the DoF train flows
 
 | ![Noraml train flow](fig_train_normal.png) | ![DoF train flow](fig_train_dof.png)       |
