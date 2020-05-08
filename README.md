@@ -33,6 +33,52 @@ The most significant difference between normal training process and training pro
 
 ![DoF flow](dof_flow.png)
 
+### Advantages of DoF
+
+#### Secure and Private
+
+Using only huge amount of fully connected nodes makes harder to calculate the original values of input data. Some other processing method makes irreversible destructions of original data like the use of pooling layers. Working with image has a unique approach: the original values does not equals with raw data since a raw image was transformed and normalized before processing. The big and complex networks and pooling layers include the possibility of security. This can be used to protect personal, sensitive or health-related data. In Europe General Data Protection Regulation (GDPR) makes strict border of using data which come from European people. DoF helps to transfer and share data across countries without conflict with GDPR or any other data protection regulation. 
+
+#### Efficient
+
+At working with pre-trained models a common solution is to simply cut the classifier and change it with another one. This is not efficient since the frozen (not trained) core of the pre-trained model performs the same calculations over and over again in each epoch. With DoF the result of not trained model can be saved. Only trained layers perform new calculations in the epochs. This is much less time consuming depending on the the size rate between pre-trained model core and the custom classifier.
+
+In most cases storing datasets in DoF is effective in storage size than storing datasets as their own. The size of the data can be precisely estimated since it depends on the shape of the pre-trained model core output only.
+
+*Formulas*
+
+` DIS ` = **D**oF **I**nfo **S**ize
+
+` EC ` = **E**poch **C**ount
+
+` IC ` = **I**mage **C**ount
+
+` IS ` = **I**mage **S**ize
+
+` HNCT ` =  **H**eadless **N**etwork **C**omputation **T**ime
+
+` HOLT ` =  **H**eadless **O**utput **L**oading **T**ime
+
+` HOS ` = **H**eadless **O**utput **S**ize
+
+` TNCT ` = **T**rained **N**etwork **C**omputation **T**ime
+
+**Total saved time**
+
+` (HNCT - HOLT) * EC - HNCT `
+
+**Benefit ratio**
+
+` (TNCT + HOLT) / (HNCT + TNCT) `
+
+**Total benefit ratio**
+
+` ((TNCT + HOLT) * (EC - 1) + (HNCT + TNCT)) / ((HNCT + TNCT) * EC) `
+
+**Total saved space**
+
+` (IS * IC) - (HOS * IC) - DIS `
+
 ### Differences between the normal and the DoF train flows
 
 | ![Noraml train flow](fig_train_normal.png) | ![DoF train flow](fig_train_dof.png)       |
