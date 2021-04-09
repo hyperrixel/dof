@@ -2,6 +2,8 @@
 [![Generic badge](https://img.shields.io/badge/State-dev_released-ffa000.svg)](https://shields.io/)<br>
 # DoF - Deep Model Core Output Framework
 
+![DoF flow](coming_soon.png)
+
 ## What is this?
 
 DoF is a highly scalable dataset format which helps deep learning scientist to work with foreign and/or sensitive data. DoF provides fast dataset sharing and data-secure at the same time.
